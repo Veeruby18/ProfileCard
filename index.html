@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card | stage 0</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <article data-testid="test-profile-card" class="profile-card">
+      <header class="profile-header">
+        <h2 data-testid="test-user-name" aria-label="Profile name">
+          Odu Eloghene Vantia
+        </h2>
+      </header>
+
+      <figure class="profile-avatar">
+        <img
+          src="Profile.jpg"
+          alt="profile photo of Vantia"
+          data-testid="test-user-avatar"
+        />
+        <figcaption>Photo of Vantia</figcaption>
+      </figure>
+      <p data-testid="test-user-bio" class="profile-bio">
+        A Frontend Developer passionate about building responsive,
+        user-friendly, and accessible web applications. Recently trained in
+        modern frontend technologies and dedicated to continuous learning. Eager
+        to apply creativity and technical skills to develop practical,
+        real-world solutions that improve user experience and add value to
+        digital products.
+      </p>
+
+      <nav data-testid="test-user-social-links" class="social">
+        <ul>
+          <li>
+            <a
+              href="https://github.com/Veeruby18"
+              data-testid="test-user-social-github"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Github</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://x.com/vancial?t=yZ7F-MtpxXmnFQvhLBGqJA&s=09 "
+              data-testid="test-user-social-x"
+              target="_blank"
+              rel="noopener noreferrer"
+              >X</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://www.linkedin.com/in/eloghene-vantia-odu-a117071a6/"
+              data-testid="test-user-social-LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >linkedin</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <section data-testid="test-user-hobbies" class="profile-hobbies">
+        <h3>Hobbies</h3>
+        <ul>
+          <li>Coding</li>
+          <li>Gaming</li>
+          <li>organizing</li>
+        </ul>
+      </section>
+
+      <section data-testid="test-user-dislikes" class="profile-dislike">
+        <h3>Dislike</h3>
+        <ul>
+          <li>Traffic Jam</li>
+          <li>No power supply</li>
+          <li>slow internet</li>
+        </ul>
+      </section>
+
+      <p data-testid="test-user-time" id="ticking-time"></p>
+    </article>
+
+    <script src="index.js"></script>
+  </body>
+</html>
