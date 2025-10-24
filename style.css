@@ -22,12 +22,18 @@ body {
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  padding: 20px 40px;
+  padding: 15px 30px;
 }
 
 .profile-header h2 {
   font-size: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 4px;
+}
+
+.profile-header h2 {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.06);
 }
 
 .profile-avatar img {
@@ -39,61 +45,58 @@ body {
   margin: 5px 0;
 }
 
-figcaption{
+figcaption {
   font-style: italic;
   font-weight: 550;
   font-size: small;
 }
 
 .profile-bio {
-  font-size: 16px;
-  margin: 15px 5px;
-  height: 128.8px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: all 0.3s ease;
+  background: rgb(250, 227, 250);
+  margin: 10px 5px;
+  border-radius: 8px;
+  padding: 8px;
 }
 
-
-/* On hover, show full text */
-.profile-bio:hover {
-  /* white-space: normal;         allow wrapping to multiple lines */
-  overflow: visible;           /* show the full text */
-  background: rgb(250, 227, 250);            /* optional: background for readability */
-  position: relative;          /* ensures layering works */
-  border-radius: 5px;
-  z-index: 2;  
-  height: 210px;                /* keep text above other elements */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* optional visual pop */
+.profile-bio p {
+  font-size: 16px;
 }
 
 .social ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 25px;
-  margin-bottom: 10px;
+  gap: 50px;
+  margin-bottom: 5px;
 }
 
 .social a {
   text-decoration: none;
   color: rgb(218, 93, 218);
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
-.social a:hover{
+.social a:hover {
   color: rgb(194, 14, 194);
-  font-weight: bold;;
+  /* font-weight: bold;; */
   transition: all 0.3ms ease;
 }
 
-section {
-  margin-top: 15px;
+.social i {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.hob-dis {
+  margin-top: 5px;
   text-align: left;
 }
 
+.profile-hobbies {
+  margin-bottom: 8px;
+}
+
 section h3 {
-  margin-bottom: 5px;
   color: rgb(218, 93, 218);
 }
 
@@ -101,12 +104,12 @@ section ul {
   margin-left: 1rem;
 }
 
-#ticking-time{
+#ticking-time {
   font-size: 15px;
   justify-self: end;
   align-self: end;
-  margin-top: 1rem;
-  background: rgb(250, 227, 250); 
+  margin-top: 5px;
+  background: rgb(250, 227, 250);
   padding: 5px;
   border-radius: 10px;
   color: purple;
@@ -117,72 +120,41 @@ section ul {
     background: linear-gradient(120deg, #ffcceb, #f9f9f9);
   }
 
+  .profile-header {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 70px;
+  }
+
   .profile-card {
     max-width: 700px;
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    align-items: start;
     padding: 28px 60px;
-
-    /* text-align: left; */
   }
 
-  .profile-header h2{
-    margin: 0;
-    padding-bottom: -10;
+  .profile-header h2 {
+    padding-bottom: 4px;
+    /* margin-bottom: 4px; */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+    width: 251px;
   }
 
-  .profile-bio{
-    overflow: visible;
-    max-height: 100vh;
+  .avatar-bio {
+    display: grid;
+    grid-template-columns: 200px 1fr;
   }
 
   .social {
-    padding-top: 0.6rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-self: center;
+    align-self: center;
+    margin-left: 200px;
   }
 
-  .profile-avatar{
-    grid-column: 1/2;
-    justify-self: start;
-    align-self: start;
-    margin: 0;
+  .hob-dis {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    margin-right: 50px;
   }
-
-  .profile-avatar img {
-    width: 200px;
-    height: 200px;
-    border-radius: 20%;
-  }
-
-  .profile-card > :not(.profile-avatar) {
-    grid-column: 2/3;
-  }
-
-  .profile-header {
-    padding-bottom: 0.6rem;
-    margin-bottom: 0.8rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-
-  .social ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 60px;
-  margin-bottom: 10px;
-}
-
-  .profile-hobbies{
-    justify-self: end;
-    align-self: end;
-    grid-row: 4;
-  }
-  .profile-dislike{
-    justify-self: start;
-    align-self: start;
-    grid-row: 4;
-  }
-
 }

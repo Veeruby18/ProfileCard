@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile Card | stage 0</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -13,23 +19,28 @@
           Odu Eloghene Vantia
         </h2>
       </header>
-
-      <figure class="profile-avatar">
-        <img
-          src="Profile.jpg"
-          alt="profile photo of Vantia"
-          data-testid="test-user-avatar"
-        />
-        <figcaption>Photo of Vantia</figcaption>
-      </figure>
-      <p data-testid="test-user-bio" class="profile-bio">
-        A Frontend Developer passionate about building responsive,
-        user-friendly, and accessible web applications. Recently trained in
-        modern frontend technologies and dedicated to continuous learning. Eager
-        to apply creativity and technical skills to develop practical,
-        real-world solutions that improve user experience and add value to
-        digital products.
-      </p>
+      <div class="avatar-bio">
+        <div class="avatar">
+          <figure class="profile-avatar">
+            <img
+              src="Profile.jpg"
+              alt="profile photo of Vantia"
+              data-testid="test-user-avatar"
+            />
+            <figcaption>Photo of Vantia</figcaption>
+          </figure>
+        </div>
+        <div class="profile-bio">
+          <p data-testid="test-user-bio">
+            A Frontend Developer passionate about building responsive,
+            user-friendly, and accessible web applications. Recently trained in
+            modern frontend technologies and dedicated to continuous learning.
+            Eager to apply creativity and technical skills to develop practical,
+            real-world solutions that improve user experience and add value to
+            digital products.
+          </p>
+        </div>
+      </div>
 
       <nav data-testid="test-user-social-links" class="social">
         <ul>
@@ -39,18 +50,22 @@
               data-testid="test-user-social-github"
               target="_blank"
               rel="noopener noreferrer"
-              >Github</a
+              aria-label="GitHub"
             >
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
           </li>
 
           <li>
             <a
-              href="https://x.com/vancial?t=yZ7F-MtpxXmnFQvhLBGqJA&s=09 "
+              href="https://x.com/vancial"
               data-testid="test-user-social-x"
               target="_blank"
               rel="noopener noreferrer"
-              >X</a
+              aria-label="X"
             >
+              <i class="fa-brands fa-x" aria-hidden="true"></i>
+            </a>
           </li>
 
           <li>
@@ -59,29 +74,33 @@
               data-testid="test-user-social-LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
-              >linkedin</a
+              aria-label="LinkedIn"
             >
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
           </li>
         </ul>
       </nav>
 
-      <section data-testid="test-user-hobbies" class="profile-hobbies">
-        <h3>Hobbies</h3>
-        <ul>
-          <li>Coding</li>
-          <li>Gaming</li>
-          <li>organizing</li>
-        </ul>
-      </section>
+      <div class="hob-dis">
+        <section data-testid="test-user-hobbies" class="profile-hobbies">
+          <h3>Hobbies</h3>
+          <ul>
+            <li>Coding</li>
+            <li>Gaming</li>
+            <li>organizing</li>
+          </ul>
+        </section>
 
-      <section data-testid="test-user-dislikes" class="profile-dislike">
-        <h3>Dislike</h3>
-        <ul>
-          <li>Traffic Jam</li>
-          <li>No power supply</li>
-          <li>slow internet</li>
-        </ul>
-      </section>
+        <section data-testid="test-user-dislikes" class="profile-dislike">
+          <h3>Dislike</h3>
+          <ul>
+            <li>Traffic Jam</li>
+            <li>No power supply</li>
+            <li>slow internet</li>
+          </ul>
+        </section>
+      </div>
 
       <p data-testid="test-user-time" id="ticking-time"></p>
     </article>
